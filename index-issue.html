@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,11 +74,11 @@
                         </div>
                     </div>
                     <!-- header items two for large screens -->
-                    <nav class="hidden lg:block">
+                    <nav class="hidden lg:block" id="abc">
                         <ul class="flex my-12" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                             <li role="presentation">
                                 <button id="home-tab" data-tabs-target="#home" type="button" role="tab"
-                                    aria-controls="home" aria-selected="true" class="menu-item-two menu-item-two-active">
+                                    aria-controls="home" aria-selected="true" class="menu-item-two-active">
                                     <span class="mr-2 text-base">
                                         <i class="fa-solid fa-house"></i>
                                     </span> Home </button>
@@ -135,7 +134,7 @@
                             data-tabs-toggle="#myTabContent" role="tablist">
                             <li role="presentation">
                                 <button id="home-tab" data-tabs-target="#home" type="button" role="tab"
-                                    aria-controls="home" aria-selected="true" class="mobile-menu-items mobile-menu-items-active">
+                                    aria-controls="home" aria-selected="true" class="mobile-menu-items-active">
                                     <span class="mr-2 text-xl">
                                         <i class="fa-solid fa-house"></i>
                                     </span> Home </button>
@@ -2484,25 +2483,15 @@
     </div>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
-    <script   src="https://code.jquery.com/jquery-3.6.1.min.js"  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="  crossorigin="anonymous"></script>
     <script>
          // Add active class to the current button (highlight it)
          $(document).ready(function() {
-            $('.menu-item-two').click(function() {
-                $('.menu-item-two-active').removeClass("menu-item-two-active");
+            $('button').click(function() {
+                $('this.menu-item-two-active').removeClass("menu-item-two-active");
                 $(this).addClass("menu-item-two-active");
             });
         });
     </script>
-    <script>
-        // Add active class to the current button (highlight it)
-        $(document).ready(function() {
-           $('.mobile-menu-items').click(function() {
-               $('.mobile-menu-items-active').removeClass("mobile-menu-items-active");
-               $(this).addClass("mobile-menu-items-active");
-           });
-       });
-   </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             Typed.new('.type', {
